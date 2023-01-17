@@ -1,0 +1,186 @@
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+:root {
+
+    --very-dark-magenta: hsl(300, 43%, 22%);
+    --soft-pink: hsl(333, 80%, 67%);
+    --dark-grayish-magenta: hsl(303, 10%, 53%);
+    --light-grayish-magenta: hsl(300, 24%, 96%);
+    --white: hsl(0, 0%, 100%);
+}
+
+body {
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    font-size: 15px;
+    font-family: 'League Spartan', sans-serif;
+    color: var(--very-dark-magenta);
+}
+
+main {
+    width: 60%;
+    display: grid;
+    gap: 2rem;
+    grid-template-areas:
+        "left right"
+        "bottom bottom";
+
+}
+
+h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    padding: 0;
+    margin: 0;
+}
+
+.card {
+    background-color: var(--very-dark-magenta);
+    padding: 2rem;
+    border-radius: .5rem;
+    color: var(--dark-grayish-magenta);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+
+.heading {
+    grid-area: left;
+    display: flex;
+    flex-direction: column;
+}
+
+p {
+    padding: 0;
+    line-height: 1.2rem;
+}
+
+
+.ratings {
+    grid-area: right;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 2rem;
+}
+
+.testimonials {
+    grid-area: bottom;
+    display: flex;
+    gap: 2rem;
+    color: var(--white);
+}
+
+.subtestimonial,
+.name {
+    color: var(--white);
+}
+
+.rating {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    background-color: var(--light-grayish-magenta);
+    font-weight: 500;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.r1 {
+    margin-right: 4rem;
+}
+
+.r2 {
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+.r3 {
+    margin-left: 4rem;
+}
+
+.verified {
+    color: var(--soft-pink);
+}
+
+.profile {
+    display: flex;
+    gap: 1rem;
+}
+
+.picture {
+    border-radius: 1rem;
+    overflow: hidden;
+    height: 2rem;
+    width: 2rem;
+}
+
+.name {
+    font-weight: 500;
+}
+
+.t1 {
+    margin-bottom: 2rem;
+}
+
+.t2 {
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+
+.t3 {
+    margin-top: 2rem;
+}
+
+
+@media (max-width: 600px) {
+
+    main {
+        display: flex;
+        flex-direction: column;
+        padding-top: 5rem;
+        width: 90%;
+        gap: 1rem;
+    }
+
+    h1 {
+        font-size: 3rem;
+        text-align: center;
+    }
+
+    p {
+        text-align: center;
+    }
+
+    .testimonials {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .ratings {
+        padding: 0;
+    }
+
+    .rating {
+        flex-direction: column;
+        margin: 0;
+    }
+
+    .rating-text {
+        font-weight: 700;
+    }
+
+    .testimonial {
+        margin: 0;
+    }
+
+}
