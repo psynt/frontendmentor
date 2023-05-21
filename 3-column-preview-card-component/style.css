@@ -1,0 +1,123 @@
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+
+:root {
+    --bright-orange: hsl(31, 77%, 52%);
+    --dark-cyan: hsl(184, 100%, 22%);
+    --very-dark-cyan: hsl(179, 100%, 13%);
+
+    --transparent-white: hsla(0, 0%, 100%, 0.75);
+    --very-light-gray: hsl(0, 0%, 95%);
+}
+
+
+body {
+    font-size: 15px;
+    min-height: 100vh;
+    display: grid;
+    place-content: center;
+}
+
+h2 {
+    font-family: 'Big Shoulders Display', sans-seif;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: xx-large;
+    color: var(--very-light-gray);
+}
+
+.body {
+    font-family: 'Lexend Daca', sans-serif;
+    font-weight: 400;
+    color: var(--transparent-white);
+    margin-bottom: 75px;
+}
+
+.flex-container {
+    width: fit-content;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.card {
+    padding: 30px;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    width: 200px;
+}
+
+.card img {
+    width: min-content;
+}
+
+.more {
+    border-radius: 20px;
+    padding: 10px 20px;
+    border: 2px solid white;
+    font-family: 'Lexend Daca', sans-serif;
+    font-weight: 400;
+    align-self: flex-start;
+    background-color: white;
+}
+
+.sedan {
+    background-color: var(--bright-orange);
+}
+
+.sedan .more {
+    color: var(--bright-orange);
+}
+
+.sedan .more:hover {
+    color: var(--transparent-white);
+    background-color: var(--bright-orange);
+}
+
+.suv {
+    background-color: var(--dark-cyan);
+}
+
+.suv .more {
+    color: var(--dark-cyan);
+}
+
+.suv .more:hover {
+    color: var(--transparent-white);
+    background-color: var(--dark-cyan);
+}
+
+.luxury {
+    background-color: var(--very-dark-cyan);
+}
+
+.luxury .more {
+    color: var(--very-dark-cyan);
+}
+
+.luxury .more:hover {
+    color: var(--transparent-white);
+    background-color: var(--very-dark-cyan);
+}
+
+@media screen and (max-width: 400px) {
+    .flex-container {
+        flex-direction: column;
+        width: fit-content;
+        margin: auto;
+    }
+
+    .card {
+        width: 200px;
+    }
+}
